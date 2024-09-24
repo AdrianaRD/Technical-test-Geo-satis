@@ -1,0 +1,122 @@
+[
+    {
+        "id": 1,
+        "firstName": "Lluis",
+        "lastName": "Gros",
+        "birthDate": "1950-05-15",
+        "homeLocation": "Carrer de Pau Claris 46, Barcelona",
+        "profileImage": "/assets/img/lluis.jpg",
+        "lastKnownPosition": {
+            "latitude": 41.3855,
+            "longitude": 2.1736
+        }
+    },
+    {
+        "id": 2,
+        "firstName": "Antonio",
+        "lastName": "Anglés",
+        "birthDate": "1963-05-24",
+        "homeLocation": "Avinguda Diagonal 123, Barcelona",
+        "profileImage": "/assets/img/antonio.jpg",
+        "lastKnownPosition": {
+            "latitude": 41.3849,
+            "longitude": 2.1740
+        }
+    },
+    {
+        "id": 3,
+        "firstName": "Joaquín",
+        "lastName": "Guzmán",
+        "birthDate": "1954-04-04",
+        "homeLocation": "Carrer de l'Arc de Sant Martí 8, Barcelona",
+        "profileImage": "/assets/img/joaquin.jpg",
+        "lastKnownPosition": {
+            "latitude": 41.3852,
+            "longitude": 2.1732
+        }
+    },
+    {
+        "id": 4,
+        "firstName": "Rafael",
+        "lastName": "García",
+        "birthDate": "1975-09-10",
+        "homeLocation": "Carrer de la Indústria 45, Barcelona",
+        "profileImage": "/assets/img/rafael.jpg",
+        "lastKnownPosition": {
+            "latitude": 41.3860,
+            "longitude": 2.1738
+        }
+    },
+    {
+        "id": 5,
+        "firstName": "Jordi",
+        "lastName": "Pujol",
+        "birthDate": "1980-09-22",
+        "homeLocation": "Carrer de Casanova 32, Barcelona",
+        "profileImage": "/assets/img/jordi.jpg",
+        "lastKnownPosition": {
+            "latitude": 41.3847,
+            "longitude": 2.1735
+        }
+    },
+    {
+        "id": 6,
+        "firstName": "Levi",
+        "lastName": "Bellfield",
+        "birthDate": "1968-04-17",
+        "homeLocation": "Baker Street 221B, Londres",
+        "profileImage": "/assets/img/levi.jpeg",
+        "lastKnownPosition": {
+            "latitude": 51.5076,
+            "longitude": -0.1275
+        }
+    },
+    {
+        "id": 7,
+        "firstName": "Stephen",
+        "lastName": "Port",
+        "birthDate": "1975-02-22",
+        "homeLocation": "Fleet Street 34, Londres",
+        "profileImage": "/assets/img/stephen.avif",
+        "lastKnownPosition": {
+            "latitude": 51.5073,
+            "longitude": -0.1279
+        }
+    },
+    {
+        "id": 8,
+        "firstName": "Mark",
+        "lastName": "Bridger",
+        "birthDate": "1976-09-06",
+        "homeLocation": "Oxford Street 56, Londres",
+        "profileImage": "/assets/img/mark.jpg",
+        "lastKnownPosition": {
+            "latitude": 51.5075,
+            "longitude": -0.1277
+        }
+    },
+    {
+        "id": 9,
+        "firstName": "David",
+        "lastName": "McGreavy",
+        "birthDate": "1952-06-24",
+        "homeLocation": "Victoria Street 10, Londres",
+        "profileImage": "/assets/img/david.jpg",
+        "lastKnownPosition": {
+            "latitude": 51.5072,
+            "longitude": -0.1280
+        }
+    },
+    {
+        "id": 10,
+        "firstName": "Dale",
+        "lastName": "Crouch",
+        "birthDate": "1984-06-14",
+        "homeLocation": "Regent Street 78, Londres",
+        "profileImage": "/assets/img/daniel.jpg",
+        "lastKnownPosition": {
+            "latitude": 51.5074,
+            "longitude": -0.1276
+        }
+    }
+]

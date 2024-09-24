@@ -1,0 +1,9 @@
+.custom-dropdown-menu .p-menu {
+    max-height: 900px; 
+    overflow-y: hidden; 
+}
+
+.custom-dropdown-menu .p-menu-list {
+    max-height: 900px; 
+    overflow-y: auto;  
+}

@@ -1,0 +1,37 @@
+/* Style for the row */
+.offender-row {
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+/* Hover effect to change background color */
+.offender-row:hover {
+    background-color: rgba(235, 248, 255, 0.795);
+}
+
+/* Style to enlarge the edit icon */
+.edit-icon {
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+/* Hover effect to change icon color to blue */
+.edit-icon:hover {
+    color: rgb(0, 162, 255);
+}
+
+/* Style for active icon (when modal is open) */
+.active-icon {
+    color: rgb(0, 162, 255);
+}
+
+/* Style for "image not available" text */
+.no-image-text {
+    font-style: italic;
+    color: #888888;
+    display: block;
+    text-align: center;
+    font-size: 20px;
+}
+

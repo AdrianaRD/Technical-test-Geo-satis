@@ -1,0 +1,50 @@
+<p-dialog [(visible)]="displayModal" [modal]="true" [closable]="true" (onHide)="closeModal()" [header]="modalType === 'add' ? 'Add Offender' : 'Edit Offender'" [style]="{width: '50vw'}">
+  <form *ngIf="offender">
+    <div class="form-row">
+      <div class="form-column">
+        <label for="firstName">First Name</label>
+        <input id="firstName" type="text" [(ngModel)]="offender.firstName" name="firstName" class="p-inputtext p-component"
+               [ngClass]="{'error-field': !offender.firstName}" 
+               (keypress)="allowLettersAndSpaces($event)" />
+      </div>
+      <div class="form-column">
+        <label for="lastName">Last Name</label>
+        <input id="lastName" type="text" [(ngModel)]="offender.lastName" name="lastName" class="p-inputtext p-component"
+               [ngClass]="{'error-field': !offender.lastName}"
+               (keypress)="allowLettersAndSpaces($event)" />
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-column">
+        <label for="birthDate">Birth Date</label>
+        <input id="birthDate" type="date" [(ngModel)]="offender.birthDate" name="birthDate" class="p-inputtext p-component" />
+      </div>
+      <div class="form-column">
+        <label for="homeLocation">Home Location</label>
+        <input id="homeLocation" type="text" [(ngModel)]="offender.homeLocation" name="homeLocation" class="p-inputtext p-component"
+               [ngClass]="{'error-field': !offender.homeLocation}" />
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-column">
+        <label for="latitude">Latitude</label>
+        <input id="latitude" type="text" [(ngModel)]="offender.lastKnownPosition.latitude" name="latitude" class="p-inputtext p-component"
+               [ngClass]="{'error-field': !offender.lastKnownPosition.latitude}"
+               (keypress)="allowNumbersAndSymbols($event)" />
+      </div>
+      <div class="form-column">
+        <label for="longitude">Longitude</label>
+        <input id="longitude" type="text" [(ngModel)]="offender.lastKnownPosition.longitude" name="longitude" class="p-inputtext p-component"
+               [ngClass]="{'error-field': !offender.lastKnownPosition.longitude}"
+               (keypress)="allowNumbersAndSymbols($event)" />
+      </div>
+    </div>
+
+    <div class="p-dialog-footer" style="text-align: right;">
+      <p-button label="Cancel" class="p-button-secondary" (click)="closeModal()"></p-button>
+      <p-button label="{{ modalType === 'add' ? 'Add' : 'Update' }}" class="p-button-success" (click)="saveOffender()" [disabled]="!isFormValid()"></p-button>
+    </div>
+  </form>
+</p-dialog>

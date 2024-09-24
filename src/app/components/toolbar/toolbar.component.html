@@ -1,0 +1,27 @@
+<p-toolbar styleClass="bg-gray-900 shadow-2"
+    [style]="{ 'border-radius': '3rem', 'background-image': 'linear-gradient(to right, rgb(226, 229, 239), rgb(150, 150, 150))' }">
+    <ng-template pTemplate="start">
+        <img src="/assets/img/geosatis.png" style="width: 100px; height: auto;" />
+    </ng-template>
+    <ng-template pTemplate="center">
+        <div class="flex flex-wrap align-items-center gap-3">
+            <span>{{ currentTime }}</span>
+        </div>
+    </ng-template>
+    <ng-template pTemplate="end">
+        <div class="flex align-items-center gap-2">
+            <i class="fa-solid fa-user" style="color: #ffffff; font-size: 2rem;"></i>
+
+            <button class="p-link font-bold text-bluegray-50" (click)="op.toggle($event)">
+                <i class="fa-solid fa-caret-down" style="color: #ffffff;"></i>
+                Admin
+            </button>
+
+            <p-overlayPanel #op>
+                <p-dropdown [options]="timezonesDropdown" [(ngModel)]="selectedTimezone" placeholder="Select Timezone"
+                    styleClass="custom-dropdown" (onChange)="changeTimezone($event.value)">
+                </p-dropdown>
+            </p-overlayPanel>
+        </div>
+    </ng-template>
+</p-toolbar>

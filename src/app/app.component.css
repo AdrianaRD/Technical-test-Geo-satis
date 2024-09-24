@@ -1,0 +1,39 @@
+/* Default style for large screens (row layout) */
+.map-offender-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.map-container {
+    width: 60%;
+}
+
+.offender-list-container {
+    width: 40%;
+}
+
+/* Media query for smaller screens (less than 1300px) */
+@media screen and (max-width: 1300px) {
+    .map-offender-container {
+        flex-direction: column;
+    }
+
+    .map-container,
+    .offender-list-container {
+        width: 100%;
+    }
+
+    .offender-list-container {
+        margin-top: 1rem;
+    }
+
+    .map-container {
+        min-height: 300px;
+    }
+}
+
+#map {
+    height: 100%;
+    width: 100%;
+}

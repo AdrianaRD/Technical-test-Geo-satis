@@ -1,0 +1,39 @@
+/* Styling for form rows */
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+/* Columns take 50% width */
+.form-column {
+    flex: 0 0 48%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Adjust spacing between columns */
+.form-column label {
+    margin-bottom: 0.5rem;
+}
+
+/* Red border for required fields that are empty */
+.error-field {
+    border: 2px solid red !important;
+}
+
+/* Dialog footer padding */
+.p-dialog-footer {
+    padding: 1rem 0;
+}
+
+/* Button margin inside dialog */
+.p-button {
+    margin-left: 0.5rem;
+}
+
+/* Disabled button styling */
+.p-button[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+}

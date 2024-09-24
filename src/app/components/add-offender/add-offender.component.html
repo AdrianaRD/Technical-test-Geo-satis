@@ -1,0 +1,9 @@
+<p-button label="New offender" icon="fa-solid fa-plus" class="p-button-primary" (click)="showAddOffenderModal()"></p-button>
+
+<app-offender-modal
+  [offender]="newOffender"
+  [displayModal]="displayAddModal"
+  modalType="add"
+  (offenderSaved)="addOffender()"
+  (modalClosed)="closeAddModal()">
+</app-offender-modal>

@@ -1,0 +1,27 @@
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.form-column {
+  flex: 0 0 48%;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-column label {
+  margin-bottom: 0.5rem;
+}
+
+.p-dialog-footer {
+  padding: 1rem 0;
+}
+
+.p-button {
+  margin-left: 0.5rem;
+}
+
+.error-field {
+  border: 1px solid red;
+}

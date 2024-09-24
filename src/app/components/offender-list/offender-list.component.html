@@ -1,0 +1,48 @@
+<p-table 
+  [value]="offenders" 
+  [paginator]="true" 
+  [rows]="5" 
+  [responsiveLayout]="'scroll'" 
+  sortField="lastName"
+  [sortOrder]="1" 
+  (onPage)="onPageChange($event)">
+  
+  <!-- Definir las columnas de la tabla -->
+  <ng-template pTemplate="header">
+    <tr>
+      <th pSortableColumn="firstName">First Name <p-sortIcon field="firstName"></p-sortIcon></th>
+      <th pSortableColumn="lastName">Last Name <p-sortIcon field="lastName"></p-sortIcon></th>
+      <th pSortableColumn="birthDate">Birth Date <p-sortIcon field="birthDate"></p-sortIcon></th>
+      <th>Home Location</th>
+      <th>Profile Image</th>
+      <th>Edit</th>
+    </tr>
+  </ng-template>
+
+  <ng-template pTemplate="body" let-offender>
+    <tr (click)="onRowClick(offender)" class="offender-row">
+      <td>{{ offender.firstName }}</td>
+      <td>{{ offender.lastName }}</td>
+      <td>{{ offender.birthDate }}</td>
+      <td>{{ offender.homeLocation }}</td>
+      <td>
+        <!-- Verifica si hay imagen, si no muestra el mensaje alternativo -->
+        <ng-container *ngIf="offender.profileImage; else noImage">
+          <img [src]="offender.profileImage" alt="{{ offender.firstName }} {{ offender.lastName }}" width="100">
+        </ng-container>
+        <ng-template #noImage>
+          <span class="no-image-text">Photo Unavailable</span>
+        </ng-template>
+      </td>
+      <td>
+        <!-- Icono de edición con ngClass para controlar el color si está activo -->
+        <i class="fa-solid fa-pen-to-square edit-icon" [ngClass]="{'active-icon': activeOffenderId === offender.id}"
+          (click)="openEditModal(offender)">
+        </i>
+      </td>
+    </tr>
+  </ng-template>
+</p-table>
+<app-offender-modal [offender]="selectedOffender" [displayModal]="displayModal" modalType="edit"
+  (offenderSaved)="updateOffender()" (modalClosed)="closeModal()">
+</app-offender-modal>
